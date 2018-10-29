@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'penganjur',
     'import_export',
+
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -75,27 +79,27 @@ WSGI_APPLICATION = 'eserta.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
 DATABASES = {
-   'default': {
-       'ENGINE': 'sql_server.pyodbc',
-       'NAME': 'DBUAT_azmi',
-       'USER' : 'sa',
-       'PASSWORD': 'cdbdev@2017',
-       'HOST' : '10.101.1.100',
-       'PORT': '1433',
-       'OPTIONS': {
-           'driver': 'ODBC Driver 13 for SQL Server',
-       },
-   },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
+
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'sql_server.pyodbc',
+#        'NAME': 'DBUAT_azmi',
+#        'USER' : 'sa',
+#        'PASSWORD': 'cdbdev@2017',
+#        'HOST' : '10.101.1.100',
+#        'PORT': '1433',
+#        'OPTIONS': {
+#            'driver': 'ODBC Driver 13 for SQL Server',
+#        },
+#    },
+# }
 
 
 # Password validation
